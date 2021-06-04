@@ -7,13 +7,14 @@ import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
-    MailOutlined,
+    HomeOutlined,
     AppstoreOutlined,
   } from '@ant-design/icons';
 import './index.scss';
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu; 
+
 class LayoutContainer extends Component{
     state = {
         collapsed: false,
@@ -44,10 +45,10 @@ class LayoutContainer extends Component{
                     <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
                         <div className="logo" />
                         <Menu theme="dark" mode="inline" defaultSelectedKeys={[this.state.current]} onClick={this.handleClick}>
-                            <Menu.Item key="home" icon={<UserOutlined />}>
+                            <Menu.Item key="home" icon={<HomeOutlined />}>
                                 nav 1
                             </Menu.Item>
-                            <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
+                            <SubMenu key="sub1" icon={<UserOutlined />} title="Navigation One">
                                 <Menu.Item key="user">Option 1</Menu.Item>
                                 <Menu.Item key="2">Option 2</Menu.Item>
                                 <Menu.Item key="3">Option 3</Menu.Item>
@@ -72,7 +73,7 @@ class LayoutContainer extends Component{
                             }
                         </Header>
                         <Content
-                            className="site-layout-background"
+                            className="site-container-background"
                             style={{
                             margin: '24px 16px',
                             padding: 24,

@@ -8,7 +8,6 @@ import {
 import './style2.scss'
 import http from '@/utils/http';
 
-
 class Login extends React.Component {
   constructor() {
     super()
